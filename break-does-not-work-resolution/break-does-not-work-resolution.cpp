@@ -13,11 +13,8 @@ int main() {
 
     // Read words until Enter key is pressed
     while (1) {
-        if (scanf("%99s", &words[i][0]) == 1) {
-            i++;
-        }
-        else {
-            break; // Exit the loop when no more words are entered
+         if (fgets(words[i], sizeof words[i], stdin) == NULL || words[i][0] == '\n') {
+          break;
         }
     }
 
